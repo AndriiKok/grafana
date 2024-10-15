@@ -9,7 +9,7 @@
 
     sudo systemctl status prometheus-node-exporter
 
-## 2.	Устанавливаем Prometheus
+## 2.	Устанавливаем Prometheus и Grafana
 Выбираем один сервер, на который будем ставить сервис мониторинга, и устанавливаем на него необходимый софт:
 
     bash <(curl -s https://raw.githubusercontent.com/AndriiKok/grafana/refs/heads/main/Grafana.sh)
