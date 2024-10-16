@@ -47,7 +47,7 @@
 
 - Шаг 2. Выбираем «**Add data source**» и указываем первый из списка вариант **Prometheus**. Заполняем поле **URL** значением **http://localhost:9090**, далее «**Save & Test**».
 
-- Шаг 3. Переходим на http://АДРЕС_СЕРВЕРА:3000/dashboard/import и в поле «**Or paste JSON**» вставляем весь текст из json файла ниже:
+- Шаг 3. Переходим на http://АДРЕС_СЕРВЕРА:3000/dashboard/import и в поле «**Or paste JSON**» вставляем весь текст из json файла:
 
       https://github.com/AndriiKok/grafana/blob/main/Grafana_model.json
 
