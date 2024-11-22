@@ -16,3 +16,10 @@ sudo apt-get autoremove
 sudo apt-get update
 sudo apt-get install prometheus-node-exporter -y
 sudo systemctl enable node_exporter && sudo systemctl restart node_exporter
+
+# Оптимизируем количество собираемых метрик
+service_file="/lib/systemd/system/prometheus-node-exporter.service"
+new_execstart='ExecStart=/usr/bin/prometheus-node-exporter $ARGS --collector.disable-defaults --collector.textfile --collector.stat --collector.uname --collector.meminfo --collector.cpu --collector.loadavg --collector.filesystem --collector.diskstats --collector.netstat --collector.sockstat --collector.netdev'
+sed -i "/^ExecStart/c\\$new_execstart" "$service_file"
+systemctl daemon-reload
+systemctl restart prometheus-node-exporter
