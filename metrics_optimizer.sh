@@ -4,7 +4,7 @@
 service_file="/lib/systemd/system/prometheus-node-exporter.service"
 
 # Новая строка ExecStart
-new_execstart='ExecStart=/usr/bin/prometheus-node-exporter $ARGS --collector.disable-defaults --collector.textfile --collector.stat --collector.uname --collector.meminfo --collector.cpu --collector.loadavg --collector.filesystem --collector.diskstats --collector.netstat --collector.sockstat --collector.netdev --collector.textfile.directory=/var/lib/prometheus/node-exporter'
+new_execstart='ExecStart=/usr/bin/prometheus-node-exporter $ARGS --collector.disable-defaults --collector.textfile --collector.stat --collector.uname --collector.meminfo --collector.cpu --collector.loadavg --collector.filesystem --collector.diskstats --collector.netstat --collector.sockstat --collector.netdev'
 
 # Замена строки ExecStart на новую строку
 sed -i "/^ExecStart/c\\$new_execstart" "$service_file"
