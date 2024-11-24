@@ -15,7 +15,7 @@ sudo apt-get autoremove
 #Устанавливаем node_exporter
 sudo apt-get update
 sudo apt-get install prometheus-node-exporter -y
-sudo systemctl enable node_exporter && sudo systemctl restart node_exporter
+sudo systemctl enable prometheus-node-exporter && sudo systemctl restart prometheus-node-exporter
 
 # Оптимизируем количество собираемых метрик
 service_file="/lib/systemd/system/prometheus-node-exporter.service"
